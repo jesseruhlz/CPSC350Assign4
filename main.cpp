@@ -92,54 +92,6 @@ int main(int argc, char *argv[])
   else{
     cout << "Enter location of a file name in command line." << endl << endl;
   }
-  /*
-  (r.readFile("GivenCase01.txt"));
-  while (!endRun){
-    if (r.studentQueue.isEmpty()){
-      int t = 0;
-      for (int i = 0; i < r.totalWindows; ++i){
-        //opem window
-        //cout << "opening window" << endl;
-        if ((r.windowArray[i]->timeAtWindow) < 1){
-          t++;
-        }
-      }
-      if (t == r.totalWindows)
-        endRun = true;
-    }
-    //sending student 1 from queu to window
-    for (int i = 0; i < r.totalWindows; ++i){
-      //open window
-      if (r.windowArray[i]->timeAtWindow < 1){
-        //student in queue
-        if (!r.studentQueue.isEmpty()){
-          Student* s = r.studentQueue.getFront();
-          if (s->entry <= currentTime){
-            if (r.windowArray[i]->idle > 0){
-              r.idleTime.enqueue(r.windowArray[i]->idle);
-            }
-            //take student from queue to window
-            r.windowArray[i] = r.studentQueue.dequeue();
-            r.waitTime.enqueue(r.windowArray[i]->timeInQueue);
-          }
-        }
-      }
-    }
-    currentTime++;
-    r.incrementTime(currentTime);
-  }
-  for (int i = 0; i < r.totalWindows; ++i){
-    if (r.windowArray[i]->idle > 0)
-      r.idleTime.enqueue(r.windowArray[i]->idle);
-  }
-  r.minuteMessage(currentTime);
-  cout << "Mean student wait time: " << r.meanWait() << r.getMinuteMess() << endl;
-  cout << "Median wait time: " << r.medianWait() << " minte(s)." << endl;
-  cout << "Longest wait time: " << r.longestWait() << " minute(s)." << endl;
-  cout << "Students waiting over 10 minutes " << r.numStudOverTen() << " student(s)." << endl;
-  cout << "Mean window idle: " << r.meanIdle() << " minute(s)." << endl;
-  cout << "Longest window idle time: " << r.longestIdle() << " minute(s)." << endl;
-  cout << "Idle time over 5 minutes: " << r.numIdleOverFive() << " minute(s)." << endl;
-  */
+  
   return 0;
 }
